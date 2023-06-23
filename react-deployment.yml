@@ -15,20 +15,8 @@ spec:
     spec:
       containers:
         - name: react-container
-          image:kumuda0707/reactimg:latest
+          image: kumuda0707/reactimg:latest
           ports:
             - containerPort: 3000
 
-# service.yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: react-service
-spec:
-  selector:
-    app: react-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
-  type: LoadBalancer
+
